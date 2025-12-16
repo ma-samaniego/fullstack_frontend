@@ -1,0 +1,370 @@
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.admin-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 120px);
+}
+
+/* ===== HEADER ===== */
+.admin-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(240, 18, 126, 0.2), rgba(139, 92, 246, 0.2));
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.admin-header h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 20px rgba(240, 18, 126, 0.5);
+}
+
+.admin-header p {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* ===== MENSAJES DE NOTIFICACIÓN ===== */
+.admin-message {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  animation: slideDown 0.3s ease-out;
+}
+
+.admin-message.success {
+  background: rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(34, 197, 94, 0.5);
+  color: #4ade80;
+}
+
+.admin-message.error {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid rgba(239, 68, 68, 0.5);
+  color: #f87171;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== PESTAÑAS ===== */
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #8B5CF6;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #F0127E, #8B5CF6);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 5px 20px rgba(240, 18, 126, 0.4);
+}
+
+/* ===== CONTENIDO ===== */
+.admin-content {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  min-height: 400px;
+}
+
+.admin-content h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+}
+
+/* ===== SPINNER DE CARGA ===== */
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  font-size: 1.5rem;
+  color: #8B5CF6;
+  font-weight: 700;
+}
+
+/* ===== TABLA ===== */
+.table-container {
+  overflow-x: auto;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #fff;
+}
+
+.admin-table thead {
+  background: rgba(240, 18, 126, 0.2);
+}
+
+.admin-table thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid rgba(240, 18, 126, 0.5);
+}
+
+.admin-table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.admin-table tbody td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.title-cell {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.comment-cell {
+  max-width: 350px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.no-data {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 2rem !important;
+}
+
+/* ===== BADGES ===== */
+.rol-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.rol-badge.admin {
+  background: linear-gradient(135deg, #F0127E, #8B5CF6);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(240, 18, 126, 0.3);
+}
+
+.rol-badge.user {
+  background: rgba(139, 92, 246, 0.2);
+  color: #8B5CF6;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+}
+
+.category-badge {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  background: rgba(240, 18, 126, 0.2);
+  color: #F0127E;
+  border: 1px solid rgba(240, 18, 126, 0.5);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* ===== BOTONES DE ACCIÓN ===== */
+.btn-action {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0 0.25rem;
+}
+
+.btn-action.promote {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+}
+
+.btn-action.promote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(16, 185, 129, 0.4);
+}
+
+.btn-action.demote {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: white;
+}
+
+.btn-action.demote:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
+}
+
+.btn-action.delete {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.btn-action.delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
+}
+
+/* ===== FOOTER ===== */
+.admin-footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.btn-back {
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #8B5CF6;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(139, 92, 246, 0.3);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .admin-table {
+    font-size: 0.9rem;
+  }
+
+  .admin-table thead th,
+  .admin-table tbody td {
+    padding: 0.75rem;
+  }
+
+  .title-cell,
+  .comment-cell {
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-container {
+    padding: 1rem;
+  }
+
+  .admin-header h1 {
+    font-size: 2rem;
+  }
+
+  .admin-header p {
+    font-size: 1rem;
+  }
+
+  .admin-tabs {
+    flex-direction: column;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+
+  .admin-content {
+    padding: 1rem;
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+
+  .admin-table {
+    font-size: 0.85rem;
+    min-width: 700px;
+  }
+
+  .admin-table thead th,
+  .admin-table tbody td {
+    padding: 0.5rem;
+  }
+
+  .btn-action {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .admin-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .admin-table {
+    font-size: 0.8rem;
+  }
+}

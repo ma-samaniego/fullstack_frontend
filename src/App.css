@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background-image:
+	radial-gradient(circle at center top, rgba(114, 0, 255, 0.6) 0%, transparent 70%),
+	linear-gradient(180deg, #2a0144 0%, #3a0266 50%, #4b0186 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Contenedor principal de la App */
+.App {
+  min-height: 100vh; /* Asegura que la app ocupe al menos toda la altura */
+  display: flex;
+  flex-direction: column; /* Apila Navbar, main-content, footer */
+}
+
+/* El contenido principal (donde se cargan las rutas) */
+.main-content {
+  flex-grow: 1; /* Hace que este contenedor crezca y empuje el footer hacia abajo */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Alinea el contenido arriba */
+  padding-top: 90px; /* Espacio para el navbar fijo */
+}
+
+/* === BARRA DE NAVEGACIÓN (NAVBAR) === */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.5rem;
+  background: rgba(42, 1, 68, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.mi-navbar {
+  background-color: transparent;
+}
+
+.mi-navbar .nav-link {
+  color: #ccc;
+  border-radius: 20px;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  transition: all 0.3s ease;
+}
+
+.mi-navbar .nav-link:hover {
+  background-color: rgb(255, 238, 0);
+  color: #ffffff;
+}
+.mi-navbar .nav-link:focus {
+  color: #ffffff;
+}
+
+/* === FOOTER === */
+.footer {
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 1rem 0; /* Un poco más de espacio */
+  margin-top: auto; /* Truco de Flexbox para empujarlo al fondo */
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

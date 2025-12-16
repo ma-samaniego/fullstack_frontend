@@ -1,0 +1,88 @@
+/* ===== ESTILOS GLOBALES DE BOTONES PIXELHUB ===== */
+
+/* Botón Primario - Gradient Rosa/Púrpura */
+.btn-pixelhub-primary {
+  padding: 0.75rem 2rem;
+  background: linear-gradient(135deg, #F0127E, #8B5CF6) !important;
+  border: none !important;
+  border-radius: 12px;
+  color: white !important;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(240, 18, 126, 0.3);
+  text-transform: none;
+}
+
+.btn-pixelhub-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(240, 18, 126, 0.5);
+  background: linear-gradient(135deg, #d10e6d, #7a4fd9) !important;
+  color: white !important;
+}
+
+.btn-pixelhub-primary:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 15px rgba(240, 18, 126, 0.4);
+}
+
+.btn-pixelhub-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Botón Secundario - Glass Morphism */
+.btn-pixelhub-secondary {
+  padding: 0.75rem 2rem;
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 12px;
+  color: white !important;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  text-transform: none;
+}
+
+.btn-pixelhub-secondary:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: #8B5CF6 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(139, 92, 246, 0.3);
+}
+
+.btn-pixelhub-secondary:active {
+  transform: translateY(0);
+}
+
+/* Botón Link - Transparente */
+.btn-pixelhub-link {
+  padding: 0.5rem 1rem;
+  background: transparent !important;
+  border: none !important;
+  color: #8B5CF6 !important;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.btn-pixelhub-link:hover {
+  color: #F0127E !important;
+  text-decoration: underline;
+}
+
+/* Botón de ancho completo */
+.btn-pixelhub-full {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,126 @@
+.contenedor-form-inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el logo y el formulario */
+  
+  /* Usamos un fondo semitransparente para dejar ver el degradado del body */
+  background-color: radial-gradient(circle at center top, rgba(114, 0, 255, 0.6) 0%, transparent 70%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 2.5rem 2rem;
+  margin-top: 2rem; /* Espacio desde la parte superior */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(4px);
+  margin-bottom: 3rem;
+  
+  /* Definimos un ancho */
+  width: 90%;
+  max-width: 440px;
+}
+
+/*
+ * Estilo para el logo que aparece encima del formulario
+ */
+.navbar-logo {
+  height: 70px;
+  width: auto;
+  margin-bottom: 1.5rem;
+}
+
+/*
+ * Estilos para el separador "O"
+ * Usa Flexbox para crear las líneas a los lados.
+ * NOTA: Esta clase se usa en cuenta.tsx, registro.tsx e inicioSesion.tsx
+ */
+.separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #ccc;
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.separator::before {
+  margin-right: 0.5em;
+}
+
+.separator::after {
+  margin-left: 0.5em;
+}
+
+
+/* --- Personalización de Clases de Bootstrap --- */
+
+/*
+ * Sobrescribimos los inputs de Bootstrap para el tema oscuro
+ */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff; /* Texto que el usuario escribe */
+  border-radius: 8px;
+}
+
+/* Color del placeholder */
+.form-control::placeholder {
+  color: #a0a0a0;
+}
+
+/* Estilo al seleccionar el input */
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  border-color: #bf80ff; /* Un toque de color púrpura claro */
+  box-shadow: 0 0 0 0.25rem rgba(114, 0, 255, 0.3); /* Sombra de foco */
+}
+
+.text-danger {
+  color: #ff6b6b !important; /* Un rojo más brillante y claro */
+  font-weight: 500;
+}
+
+.btn-light {
+  font-weight: bold;
+  background-color: #f8f9fa;
+  color: #3a0266; /* Color principal de tu fondo */
+  border: none;
+  padding: 10px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-light:hover {
+  background-color: #e0e0e0;
+  color: #2a0144;
+}
+
+/* Botón deshabilitado */
+.btn-light:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  opacity: 0.7;
+}
+
+/* Botón secundario (para "Volver" o "Si ya tienes cuenta") */
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #ccc;
+  padding: 10px 0;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: #ffffff;
+}

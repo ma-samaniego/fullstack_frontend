@@ -1,0 +1,97 @@
+/* src/css/donaciones.css */
+
+.donaciones-container {
+    background-color: radial-gradient(circle at center top, rgba(114, 0, 255, 0.6) 0%, transparent 70%);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    color: white;
+    
+    width: 90%;
+    max-width: 600px; 
+    margin: 2rem auto;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .donaciones-header h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .donaciones-header p {
+    color: #ccc;
+    margin-bottom: 2rem;
+  }
+  
+  /* Grilla de botones de monto */
+  .montos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn-monto {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-monto:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .btn-monto.seleccionado {
+    background-color: #F0127E; /* El rosa neón de tu app */
+    border-color: #F0127E;
+    box-shadow: 0 0 15px rgba(240, 18, 126, 0.5);
+  }
+  
+  /* Input personalizado para "Otro monto" */
+  .input-custom-monto {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid #F0127E;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  /* Formulario de tarjeta simulado */
+  .tarjeta-simulada {
+    background: rgba(0,0,0,0.4);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    text-align: left;
+  }
+  
+  .btn-donar {
+    background-color: #05a4d8; /* El azul de tu registro/login */
+    color: black;
+    font-weight: bold;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-donar:hover {
+    background-color: #0280a5;
+    color: white;
+  }
